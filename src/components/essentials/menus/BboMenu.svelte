@@ -6,36 +6,44 @@
 
 <style lang="scss">
   .menu-container {
-    height: fit-content;
+    position: fixed;
     width: 100%;
+    z-index: 99;
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px;
-
-    .logo {
-      height: 75px;
-    }
-
-    .options {
-      height: 100%;
-      width: fit-content;
+    .g-wrapper {
+      height: fit-content;
+      width: 100%;
 
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      padding-top: 20px;
 
-      gap: 3px;
+      .logo {
+        height: 50px;
+      }
+
+      .options {
+        height: 100%;
+        width: fit-content;
+
+        display: flex;
+        align-items: center;
+
+        gap: 3px;
+      }
     }
   }
 </style>
 
 <div class="menu-container">
-  <img class="logo" src="/assets/beebo.png" alt="" />
+  <div class="g-wrapper">
+    <img class="logo" src="/assets/beebo.png" alt="" />
 
-  <div class="options">
-    {#each options as option}
-      <BboButton label={option} />
-    {/each}
+    <div class="options">
+      {#each options as option}
+        <BboButton label={option} />
+      {/each}
+    </div>
   </div>
 </div>

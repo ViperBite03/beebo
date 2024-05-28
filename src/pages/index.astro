@@ -1,12 +1,14 @@
 ---
-import BboButton from '@/components/essentials/BboButton.svelte'
 import BboMenu from '@/components/essentials/menus/BboMenu.svelte'
+import Cover from '@/components/heros/Cover.svelte'
+import Who from '@/components/heros/Who.svelte'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <style lang="scss"></style>
 
 <Layout title="Beebo the coder">
-  <BboMenu client:only />
-  <BboButton label="How Beebo works" client:only />
+  <BboMenu client:load />
+  <Cover client:load />
+  <Who client:load />
 </Layout>

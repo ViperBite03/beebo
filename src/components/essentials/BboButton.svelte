@@ -34,8 +34,8 @@
       box-shadow: none;
       border: 3px solid var(--dark);
       transform: translateX(3px) translateY(3px);
-      margin-bottom: 2px;
-      margin-right: 2px;
+      margin-bottom: 3px;
+      margin-right: 3px;
     }
   }
 </style>
