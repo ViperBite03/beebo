@@ -1,10 +1,14 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import BboButton from '../essentials/BboButton.svelte'
+  import Hero from './Hero.svelte'
+
+  let isVisible: boolean = false
 </script>
 
 <style lang="scss">
   .container {
-    height: 100dvh;
+    width: 100%;
     position: relative;
 
     display: flex;
@@ -31,10 +35,19 @@
       font-size: 20px;
       text-align: justify;
     }
+
+    .hero {
+      width: 100%;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 </style>
 
-<div class="g-wrapper container">
+<div class=" container">
   <h1>Who is Beebo? <img src="/assets/underline.png" alt="" /></h1>
 
   <h2>
@@ -42,5 +55,14 @@
     line, helping people have the best look of all solana.
   </h2>
 
-  <BboButton label="Click to see Beebo's work!" />
+  <BboButton
+    label="Click to see Beebo's work!"
+    click={() => {
+      isVisible = !isVisible
+    }}
+  />
+
+  <div class="hero" class:active={isVisible}>
+    <Hero />
+  </div>
 </div>
