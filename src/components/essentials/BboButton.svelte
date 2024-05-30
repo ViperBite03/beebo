@@ -1,6 +1,6 @@
 <script lang="ts">
   export let label: string = 'Click me'
-  export let click
+  export let click = () => {}
 
   const color: string[] = ['#62CDFF', '#FF788A', '#907EFF', '#C1FF72']
   let bgColor: string = '#fffbea'
@@ -26,7 +26,7 @@
     border-left: 3px solid var(--dark);
     border-radius: 8px;
 
-    font-weight: 600;
+    font-weight: bolder;
 
     box-shadow: 3px 3px 0px 3px var(--dark);
     transition: background-color 0.3s ease;

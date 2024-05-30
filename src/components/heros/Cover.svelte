@@ -12,7 +12,7 @@
     align-items: center;
 
     h1 {
-      font-weight: 600;
+      font-weight: bolder;
       max-width: 400px;
       font-size: 40px;
       padding-bottom: 50px;

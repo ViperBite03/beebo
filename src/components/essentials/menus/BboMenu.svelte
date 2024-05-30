@@ -42,7 +42,7 @@
 
     <div class="options">
       {#each options as option}
-        <BboButton label={option} click="" />
+        <BboButton label={option} />
       {/each}
     </div>
   </div>
